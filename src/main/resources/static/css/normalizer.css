@@ -24,7 +24,7 @@ html, body
 {
   width: 100%;
   height: 100%;
-  background-color: rgba(253, 253, 253, 1);
+  background-color: rgba(250, 250, 250, 1);
 }
 
 :focus
@@ -44,7 +44,7 @@ ol, ul, li
   list-style-position: inside;
 }
 
-h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *
+h1, h2, h3, h4, h5, h6
 {
   font-weight: bold;
   font-size: 1.2rem;
@@ -82,7 +82,6 @@ body.appLoading::before
 #header
 {
   position: fixed;
-  z-index: 9999;
   top: 0;
   left: 0;
   width: 250px;
@@ -144,8 +143,7 @@ body.appLoading::before
 #footer
 {
   position: fixed;
-  z-index: 9999;
-  top: 15px;
+  bottom: 15px;
   right: 15px;
   width: 30px;
   height: 30px;

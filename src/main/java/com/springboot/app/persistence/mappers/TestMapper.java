@@ -1,12 +1,10 @@
-package com.springboot.app.persistence.mappers;
+package com.lab.persistence.mapper;
 
-import com.springboot.app.persistence.models.TestModel;
+import com.lab.persistence.model.TestModel;
 import java.util.List;
 
 
 public interface TestMapper
 {
-
   public List<TestModel> testMapper(TestModel obj) throws Exception;
-
 }

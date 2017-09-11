@@ -1,6 +1,6 @@
-package com.springboot.app.services;
+package com.lab.persistence.service;
 
-import com.springboot.app.persistence.models.TestModel;
+import com.lab.persistence.model.TestModel;
 import java.util.List;
 
 
