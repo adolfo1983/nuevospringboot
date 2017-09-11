@@ -1,6 +1,6 @@
-package com.lab.persistence.mapper;
+package com.springboot.app.persistence.mappers;
 
-import com.lab.persistence.model.TestModel;
+import com.springboot.app.persistence.models.TestModel;
 import java.util.List;
 
 

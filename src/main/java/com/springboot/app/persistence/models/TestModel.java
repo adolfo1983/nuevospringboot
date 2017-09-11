@@ -1,4 +1,4 @@
-package com.lab.persistence.model;
+package com.springboot.app.persistence.models;
 
 public class TestModel {
 

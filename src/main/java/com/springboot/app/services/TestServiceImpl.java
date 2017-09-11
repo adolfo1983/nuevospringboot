@@ -1,10 +1,11 @@
-package com.lab.persistence.service;
+package com.springboot.app.services;
 
-import com.lab.persistence.model.TestModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.lab.persistence.mapper.TestMapper;
+import com.springboot.app.persistence.mappers.TestMapper;
+import com.springboot.app.persistence.models.TestModel;
 import java.util.List;
+
 
 
 @Service
