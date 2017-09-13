@@ -1,12 +1,12 @@
-#ini
+#inicio
 {
   float: left;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-color: rgba(15, 15, 15, 1);
-  background-image: url('../ng-img/spring.png'), url('../ng-img/angularjs.png');
-  background-position: right top, center center;
+  background-color: rgba(192,192,192,1);
+  background-image: url('../ng-img/img-info.png'), url('../ng-img/nav-logo.png');
+  background-position: right bottom, center center;
   background-repeat: no-repeat, no-repeat;
   background-size: auto 200px, 600px auto;
 }
@@ -14,8 +14,9 @@
 
 @media all and (max-width: 768px)
 {
-  #ini
+  #inicio
   {
     background-size: auto 200px, 400px auto;
   }
 }
+

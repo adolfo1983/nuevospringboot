@@ -14,7 +14,7 @@ import java.util.List;
 
 
 @Controller
-public class TestController
+public class Test
 {
 
   @Autowired
@@ -26,7 +26,7 @@ public class TestController
                   method = RequestMethod.POST,
                   produces = MediaType.APPLICATION_JSON_VALUE)
   public List<TestModel> test(@RequestBody TestModel obj) throws Exception
-  {
+  {   
     List<TestModel> x = iService.testService(obj);
 
     return x;
