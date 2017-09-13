@@ -3,15 +3,6 @@ package com.springboot.app.persistence.models;
 public class TestModel {
 
     private String table;
-    private String propiedad;
-
-    public String getPropiedad() {
-        return propiedad;
-    }
-
-    public void setPropiedad(String propiedad) {
-        this.propiedad = propiedad;
-    }
 
     public String getTable() {
         return table;
