@@ -29,23 +29,23 @@ public class SearchController
                   produces = MediaType.APPLICATION_JSON_VALUE)
   public List<ItemModel> test(@RequestBody ItemModel obj) throws Exception
   {   
-    List<ItemModel> y = null;
+    List<ItemModel> x = null;
     
     if (UtilStr.removeSpacesAll(obj.getSearch()).length() > 0) 
 	{
-		y = iService.itemService(obj);
+		x = iService.itemService(obj);
 
-		if (y.size() > 0) 
+		if (x.size() > 0) 
 		{
-			y = iService.underlineItemsService(obj, y);
+			x = iService.underlineItemsService(obj, x);
 		}
 	} 
 	else 
 	{
-		y = iService.itemService(obj);
+		x = iService.itemService(obj);
 	}
 
-	return y;
+	return x;
     
   }
   
