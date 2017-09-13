@@ -3,6 +3,8 @@ package com.springboot.app.controllers;
 
 import com.springboot.app.persistence.models.ItemModel;
 import com.springboot.app.services.ItemService;
+import com.springboot.app.utils.UtilStr;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -27,10 +29,24 @@ public class SearchController
                   produces = MediaType.APPLICATION_JSON_VALUE)
   public List<ItemModel> test(@RequestBody ItemModel obj) throws Exception
   {   
-    List<ItemModel> x = iService.itemService(obj);
+    List<ItemModel> y = null;
     
+    if (UtilStr.removeSpacesAll(obj.getSearch()).length() > 0) 
+	{
+		y = iService.itemService(obj);
 
-    return x;
+		if (y.size() > 0) 
+		{
+			y = iService.underlineItemsService(obj, y);
+		}
+	} 
+	else 
+	{
+		y = iService.itemService(obj);
+	}
+
+	return y;
+    
   }
   
    @ResponseBody
