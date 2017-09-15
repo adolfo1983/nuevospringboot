@@ -29,27 +29,9 @@ public interface ItemMapper
    */
   public List<ItemModel> getItemMapper(ItemModel obj) throws Exception;
   
-  /**
-   * Método para insertar uno o más items en la base de datos
-   * @param obj Objeto que contiene el o los items a insertar en la base de datos
-   * @return Número entero que indica el número de filas afectadas en la inserción
-   * @throws Exception
-   */
-  public int insertItemsMapper(ItemModel obj) throws Exception;
+  public int insertMapper(ItemModel obj) throws Exception;
+	public int updateMapper(ItemModel obj) throws Exception;
+	public int deleteMapper(ItemModel obj) throws Exception;
   
-  /**
-   * Método para actualizar la información de uno o más items de la base de datos
-   * @param obj Objeto que contiene la información a actualizar
-   * @return Número entero que indica el número de filas afectadas en la actualización
-   * @throws Exception
-   */
-  public int updateItemsMapper(ItemModel obj) throws Exception;
   
-  /**
-   * Método para eliminar uno o más items de la base de datos
-   * @param obj Objeto que contiene el item a eliminar de la bas de datos
-   * @return Número entero que indica el número de filas afectadas en la eliminación del o de los items
-   * @throws Exception
-   */
-  public int deleteItemsMapper(ItemModel obj) throws Exception;
 }

@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -62,26 +64,17 @@ public class SearchController
   }
 
   @ResponseBody
-  @RequestMapping(value = "/getItem",
+  @RequestMapping(value = "/getItemx",
                   method = RequestMethod.POST,
                   produces = MediaType.APPLICATION_JSON_VALUE)
   public List<ItemModel> get(@RequestBody ItemModel obj) throws Exception
   {   
     List<ItemModel> x = iService.getItemService(obj);
     
+    
 
     return x;
   }
   
-//  @ResponseBody
-//  @RequestMapping(value = "/insertItem",
-//                  method = RequestMethod.POST,
-//                  produces = MediaType.APPLICATION_JSON_VALUE)
-//  public List<ItemModel> insert(@RequestBody List<ItemModel> obj) throws Exception
-//  {   
-//    List<ItemModel> x = iService.insertItemsService(obj);
-//    
-//
-//    return x;
-//  }
+  
 }

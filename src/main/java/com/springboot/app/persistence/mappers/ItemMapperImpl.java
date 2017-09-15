@@ -4,6 +4,7 @@ package com.springboot.app.persistence.mappers;
 import com.springboot.app.persistence.models.ItemModel;
 import com.springboot.app.utils.UtilStr;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -57,7 +58,7 @@ public class ItemMapperImpl implements ItemMapper
   }
   
   @Override
-  public int insertItemsMapper(ItemModel obj) throws Exception
+  public int insertMapper(ItemModel obj) throws Exception
   {
     String sql = UtilStr.replaceSpacesToOneSpace(
             " INSERT INTO items " +
@@ -74,7 +75,7 @@ public class ItemMapperImpl implements ItemMapper
 
 
   @Override
-  public int updateItemsMapper(ItemModel obj) throws Exception
+  public int updateMapper(ItemModel obj) throws Exception
   {
     String sql = UtilStr.replaceSpacesToOneSpace(
             " UPDATE items     " +
@@ -88,7 +89,7 @@ public class ItemMapperImpl implements ItemMapper
 
 
   @Override
-  public int deleteItemsMapper(ItemModel obj) throws Exception
+  public int deleteMapper(ItemModel obj) throws Exception
   {
     String sql = UtilStr.replaceSpacesToOneSpace(
             " DELETE FROM items " +
@@ -96,7 +97,6 @@ public class ItemMapperImpl implements ItemMapper
 
     return JdbcTemplate.update(sql);
   }
-
 }
 
 
