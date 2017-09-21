@@ -39,6 +39,7 @@ public class ItemServiceImpl implements ItemService {
 
 	@Override
 	public List<ItemModel> getItemService(ItemModel obj) throws Exception {
+		System.out.println("Servicio");
 		List<ItemModel> x = iMapper.getItemMapper(obj);
 
 		return x;

@@ -64,11 +64,12 @@ public class SearchController
   }
 
   @ResponseBody
-  @RequestMapping(value = "/getItemx",
+  @RequestMapping(value = "/getItem",
                   method = RequestMethod.POST,
                   produces = MediaType.APPLICATION_JSON_VALUE)
   public List<ItemModel> get(@RequestBody ItemModel obj) throws Exception
-  {   
+  { 
+	  System.out.println("Controlador");
     List<ItemModel> x = iService.getItemService(obj);
     
     

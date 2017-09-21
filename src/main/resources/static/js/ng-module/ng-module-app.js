@@ -43,5 +43,10 @@ app.config([ '$routeProvider', '$locationProvider',
 			.when('/insertItem', {
 				templateUrl : GBL_COFG.urlTemplate('insert.html'),
 				controller : 'ng-app-controller-insert'
+			})
+			
+			.when('/editar', {
+				templateUrl : GBL_COFG.urlTemplate('editarBBDD.html'),
+				controller : 'ng-app-controller-edit-bbdd'
 			});
 		} ]);

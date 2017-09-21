@@ -21,7 +21,7 @@ public class UpdateItemController {
 	UpdateItemService pService;
 
 	@ResponseBody
-	@RequestMapping(value = "/insertItem",
+	@RequestMapping(value = "/insertItemx",
 	                method = RequestMethod.POST,
 	                produces = MediaType.APPLICATION_JSON_VALUE)
 	public int insert(@RequestBody ItemModel item) throws Exception

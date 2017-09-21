@@ -22,7 +22,7 @@ public class PruebaController {
 PruebaService pService;
 
 @ResponseBody
-@RequestMapping(value = "/getItem",
+@RequestMapping(value = "/getItemx",
                 method = RequestMethod.POST,
                 produces = MediaType.APPLICATION_JSON_VALUE)
 public int insert(@RequestBody ItemModel item) throws Exception

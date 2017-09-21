@@ -22,6 +22,7 @@ public class ItemMapperImpl implements ItemMapper
   @Override
   public List<ItemModel> getItemMapper(ItemModel obj) throws Exception
   {
+	  System.out.println("Mapper");
     String sql = " SELECT * " +
                  " FROM items " +
                  " ORDER BY id DESC ";

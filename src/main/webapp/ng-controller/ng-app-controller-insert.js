@@ -19,8 +19,8 @@ app.controller('ng-app-controller-Search',
                     		$scope.msg= "Error al introducir los datos";
                     	}
                     	
-                    	}
+                    	
                     	
                     });
-        	
-        	 		}
+        	 }
+        	 		}]);
