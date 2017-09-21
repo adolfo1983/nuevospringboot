@@ -1,6 +1,7 @@
 package com.springboot.app.persistence.mappers;
 
 
+import com.springboot.app.persistence.models.ItemModel;
 import com.springboot.app.persistence.models.TestModel;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -99,6 +101,17 @@ public class TestMapperImpl implements TestMapper
   private ResultSet columsBBDD(DatabaseMetaData data, String table) throws SQLException
   {
     return data.getColumns(null, null, table, null);
+  }
+  
+  @Override
+  public List<ItemModel> selectMapper(TestModel obj) throws Exception
+  {
+	  System.out.println("Mapper");
+    String sql = " SELECT * " +
+                 " FROM " + obj.getTable() +
+                 " ORDER BY id DESC ";
+
+    return JdbcTemplate.query(sql, new BeanPropertyRowMapper(ItemModel.class));
   }
 
 

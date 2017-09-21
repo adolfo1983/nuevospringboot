@@ -1,21 +1,34 @@
 app.controller('ng-app-controller-edit-bbdd', ['$scope', '$http', '$timeout', 'utilFactory',
     function ($scope, $http, $timeout, utilFactory)
     {
-        
-	
+  
 	(function(){
-        console.log("Hola");
-        $scope.test = function(){
+  
+$http.post('/test',{})
+     .then(function (response)
+{
+var data= response.data;
+$scope.lista=data;
+console.log(response);
+});
+
+})();
+
+	var prueba= document.querySelector('#prueba');
+	
+	$scope.getTable= function(){
              
-        $http.post('/getItem',{})
-                .thenfunction (response)
+        $http.post('/select',{
+			table : prueba.value
+        })
+                .then(function (response)
       {
-        var data= response.data;
-        $scope.lista=data;
-        console.log("Adios");
-      };
-    };
-	})();
+        var data2= response.data;
+        $scope.tabla=data2;
+        console.log(data2);
+      });
+    
+	};
         
     
 //    function scopeEdit(data){

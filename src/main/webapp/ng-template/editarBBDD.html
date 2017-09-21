@@ -1,3 +1,15 @@
-<form ng-repeat="x in formulario">
-<input ng-repeat="(key, value) in x" type="text" name="{{key}}" value="{{value}}"></input>
-</form>
+<div id="edit">
+
+<select id="prueba" name="tablas">
+<option value="select" selected>Seleccionar...</option>
+<option ng-repeat="x in lista" value="{{x.table}}">{{x.table}}</option>
+</select>
+<input type="button" ng-click="getTable()" value="Enviar" />
+
+
+
+<form ng-repeat="y in tabla">
+<input ng-repeat="(key, value) in y" type="text" name="{{key}}" value="{{value}}" />
+<input type="checkbox" name="check"/>
+</form> 
+</div>

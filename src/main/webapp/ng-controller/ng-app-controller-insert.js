@@ -1,4 +1,4 @@
-app.controller('ng-app-controller-Search',
+app.controller('ng-app-controller-insert',
         ['$scope', '$http', '$timeout', 'utilFactory', function ($scope, $http, $timeout, utilFactory)
             {
         	
