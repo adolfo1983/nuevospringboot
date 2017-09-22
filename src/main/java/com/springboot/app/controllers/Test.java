@@ -13,6 +13,7 @@ import com.springboot.app.persistence.models.ItemModel;
 import com.springboot.app.persistence.models.TestModel;
 import com.springboot.app.services.TestService;
 import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -38,9 +39,9 @@ public class Test
   @RequestMapping(value = "/select",
                   method = RequestMethod.POST,
                   produces = MediaType.APPLICATION_JSON_VALUE)
-  public List<ItemModel> select(@RequestBody TestModel obj) throws Exception
+  public List<Map<String, Object>> select(@RequestBody TestModel obj) throws Exception
   {   
-    List<ItemModel> x = iService.selectService(obj);
+	  List<Map<String, Object>> x = iService.selectService(obj);
 
     return x;
   }

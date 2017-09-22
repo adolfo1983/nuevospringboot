@@ -9,7 +9,7 @@ $http.post('/test',{})
 {
 var data= response.data;
 $scope.lista=data;
-console.log(response);
+//console.log(response);
 });
 
 })();
@@ -29,6 +29,10 @@ console.log(response);
       });
     
 	};
+	
+	
+	
+	
         
     
 //    function scopeEdit(data){

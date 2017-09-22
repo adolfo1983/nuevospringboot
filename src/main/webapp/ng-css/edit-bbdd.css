@@ -4,6 +4,7 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -12,6 +13,128 @@
   align-items: center;
 }
 
-body{
-	background: white;
+#edit > select
+{
+  width: 250px;
+  padding: 15px 10px;
+  margin: 25px 0 55px 0;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(50, 50, 50, 0.2);
+  box-shadow: inset 1px 1px 4px rgba(50, 50, 50, 0.15);
+}
+
+
+#edit > div
+{
+  float: left;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+
+#edit > div form
+{
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+
+#edit > div form fieldset
+{
+  float: left;
+  width: 200px;
+  padding: 10px;
+  margin: 2px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(50, 50, 50, 0.2);
+  box-shadow: inset 1px 1px 4px rgba(50, 50, 50, 0.15);
+}
+
+#edit > div form fieldset:first-of-type
+{
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(50, 50, 50, 0);
+  box-shadow: inset 1px 1px 4px rgba(50, 50, 50, 0);
+}
+
+#edit > div form fieldset:first-of-type,
+#edit > div form fieldset:nth-of-type(2)
+{
+  width: auto;
+}
+
+#edit > div form fieldset legend
+{
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+  padding: 4px 10px;
+  border-radius: 2px;
+  color: rgba(50, 50, 50, 0.9);
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(50, 50, 50, 0.2);
+}
+
+#edit > div form fieldset input
+{
+  width: 100%;
+  font-size: 0.8rem;
+  color: rgba(50, 50, 50, 0.9);
+}
+
+#edit > div form fieldset input[name="id"],
+#edit > div form fieldset input[type="checkbox"]
+{
+  text-align: center;
+  width: 30px;
+}
+
+.boton{
+      text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+            text-align:center;
+            text-decoration: none;
+      font-family: 'Helvetica Neue', Helvetica, sans-serif;
+      display:inline-block;
+            color: #FFF;
+            background: #7F8C8D;
+            padding: 7px 20px;
+            white-space: nowrap;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 100px;
+            margin: 10px 5px;
+            -webkit-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+}
+   
+.azul{
+  background: #3498DB;
+  box-shadow: 0px 5px 0px 0px #2980B9;
+}
+
+.azul:hover{
+  background: #39a0e5;
+}
+
+.azul:active{
+  box-shadow: 0px 2px 0px 0px #2980B9;
 }

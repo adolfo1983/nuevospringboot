@@ -6,6 +6,7 @@ import com.springboot.app.persistence.mappers.TestMapper;
 import com.springboot.app.persistence.models.ItemModel;
 import com.springboot.app.persistence.models.TestModel;
 import java.util.List;
+import java.util.Map;
 
 
 
@@ -26,9 +27,9 @@ public class TestServiceImpl implements TestService
   }
   
   @Override
-  public List<ItemModel> selectService(TestModel obj) throws Exception
+  public List<Map<String, Object>> selectService(TestModel obj) throws Exception
   {
-    List<ItemModel> x = iMapper.selectMapper(obj);
+	  List<Map<String, Object>> x = iMapper.selectMapper(obj);
     
     return x;
   }

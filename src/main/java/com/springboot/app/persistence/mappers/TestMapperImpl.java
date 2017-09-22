@@ -9,6 +9,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -104,14 +106,13 @@ public class TestMapperImpl implements TestMapper
   }
   
   @Override
-  public List<ItemModel> selectMapper(TestModel obj) throws Exception
+  public List<Map<String, Object>> selectMapper(TestModel obj) throws Exception
   {
 	  System.out.println("Mapper");
     String sql = " SELECT * " +
-                 " FROM " + obj.getTable() +
-                 " ORDER BY id DESC ";
+                 " FROM " + obj.getTable();
 
-    return JdbcTemplate.query(sql, new BeanPropertyRowMapper(ItemModel.class));
+    return JdbcTemplate.queryForList(sql);
   }
 
 

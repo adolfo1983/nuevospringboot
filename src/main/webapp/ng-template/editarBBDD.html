@@ -4,12 +4,17 @@
 <option value="select" selected>Seleccionar...</option>
 <option ng-repeat="x in lista" value="{{x.table}}">{{x.table}}</option>
 </select>
-<input type="button" ng-click="getTable()" value="Enviar" />
+<input class="boton azul" type="button" ng-click="getTable()" value="Enviar" />
 
 
-
-<form ng-repeat="y in tabla">
-<input ng-repeat="(key, value) in y" type="text" name="{{key}}" value="{{value}}" />
-<input type="checkbox" name="check"/>
-</form> 
+<div>
+<form ng-repeat="(key, obj) in tabla">
+<fieldset><input name="check" type="checkbox"/></fieldset>
+<fieldset ng-repeat="(name, value) in obj">
+<legend>{{name}}</legend>
+<input type="text" name="{{name}}" value="{{value}}" />
+</fieldset>
+</form>
+<input class="boton" type="button" ng-click="updateTable()" value="Enviar" />
+</div> 
 </div>
